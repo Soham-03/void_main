@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,15 +15,36 @@
         android:theme="@style/Theme.HackMania"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginSignUpActivity"
             android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.HackMania">
+            android:label="Earth Alchemy"
+            android:theme="@style/Theme.HackMania" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".CartActivity"
+            android:exported="false"
+            android:label="@string/title_activity_cart"
+            android:theme="@style/Theme.HackMania" />
+        <activity
+            android:name=".ProductDetails"
+            android:exported="false"
+            android:label="@string/title_activity_product_details"
+            android:theme="@style/Theme.HackMania" />
+        <activity
+            android:name=".ProductsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_products"
+            android:theme="@style/Theme.HackMania" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.HackMania">
         </activity>
     </application>
 

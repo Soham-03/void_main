@@ -9,8 +9,11 @@ import androidx.compose.runtime.setValue
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.example.hackmania.ui.screens.CartScreen
 import com.example.hackmania.ui.screens.HomeScreen
 import com.example.hackmania.ui.screens.ProductsScreen
+import com.example.hackmania.ui.screens.ProfileScreen
+import com.example.hackmania.ui.screens.SplashScreen
 import kotlinx.coroutines.delay
 
 @Composable
@@ -28,28 +31,23 @@ fun BottomNavigationGraph(
     var show by remember {
         mutableStateOf(true)
     }
-//    LaunchedEffect(Unit){
-//        delay(3000)
-//        if(!state.isFlagShipEventLoading){
-//            show = false
-//        }
-//    }
+    LaunchedEffect(Unit){
+        delay(1000)
+        show = false
+    }
     if(show){
         SplashScreen()
     }
     else{
         NavHost(navController = navController, startDestination = BottomBarScreen.Home.route){
             composable(route = BottomBarScreen.Home.route){
-                HomeScreen(viewModel = viewModel)
+                HomeScreen()
             }
-            composable(route = BottomBarScreen.Events.route){
-                ProductsScreen(viewModel)
+            composable(route = BottomBarScreen.Products.route){
+                ProductsScreen()
             }
-            composable(route = BottomBarScreen.Leaderboard.route){
-                LeaderBoardScreen(viewModel = viewModel)
-            }
-            composable(route = BottomBarScreen.Blogs.route){
-                BlogsScreen()
+            composable(route = BottomBarScreen.Profile.route){
+                ProfileScreen()
             }
 //        composable(route = "EventInfo"){
 //            EventInfoScreen(eventName = "", eventDate = "", eventTime = "","","",)

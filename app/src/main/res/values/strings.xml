@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">HackMania</string>
+    <string name="title_activity_products">ProductsActivity</string>
+    <string name="title_activity_product_details">ProductDetails</string>
+    <string name="title_activity_cart">CartActivity</string>
+    <string name="title_activity_login_sign_up">LoginSignUpActivity</string>
+    <string name="web_client_id">950215716819-q023fsb5bnod69qfqeabo7kces2ngcf2.apps.googleusercontent.com</string>
 </resources>

@@ -10,29 +10,35 @@ sealed class BottomBarScreen(
     object Home: BottomBarScreen(
         route = "home",
         title = "home",
-        icon = R.drawable.ic_home
+        icon = R.drawable.home
     )
 
-    object Events: BottomBarScreen(
-        route = "events",
-        title = "events",
-        icon = R.drawable.ic_events
+    object Products: BottomBarScreen(
+        route = "products",
+        title = "products",
+        icon = R.drawable.gift
     )
 
-    object Leaderboard: BottomBarScreen(
-        route = "leaderboard",
-        title = "leaderboard",
-        icon = R.drawable.ic_leaderboard
+    object Profile: BottomBarScreen(
+        route = "profile",
+        title = "profile",
+        icon = R.drawable.user
     )
 
-    object Blogs: BottomBarScreen(
-        route = "blogs",
-        title = "blogs",
-        icon = R.drawable.ic_blogs
+    object Cart: BottomBarScreen(
+        route = "cart",
+        title = "cart",
+        icon = R.drawable.cart
     )
-    object EventInfo: BottomBarScreen(
-        route = "eventInfo",
-        title = "eventInfo",
-        icon = R.drawable.ic_events
-    )
+
+//    object Blogs: BottomBarScreen(
+//        route = "blogs",
+//        title = "blogs",
+//        icon = R.drawable.ic_blogs
+//    )
+//    object EventInfo: BottomBarScreen(
+//        route = "eventInfo",
+//        title = "eventInfo",
+//        icon = R.drawable.ic_events
+//    )
 }
