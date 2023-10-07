@@ -16,8 +16,11 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material.icons.rounded.ArrowBack
 import androidx.compose.material3.Button
@@ -73,6 +76,7 @@ class CartActivity : ComponentActivity(), PaymentStatusListener {
                         modifier = Modifier
                             .fillMaxSize()
                             .background(offWhite)
+                            .verticalScroll(rememberScrollState())
                     )
                     {
                         Row(
@@ -146,7 +150,7 @@ class CartActivity : ComponentActivity(), PaymentStatusListener {
                         }
                         LazyColumn(
                             modifier = Modifier
-                                .height(300.dp)
+                                .height(500.dp)
                         ){
                             for(i in 0 until cartList.size){
                                 totalCartAmount += cartList[i].price.toInt()
@@ -201,16 +205,17 @@ class CartActivity : ComponentActivity(), PaymentStatusListener {
                                                 )
                                             }
                                         }
-                                        val quant by remember {
+                                        var quant by remember {
                                             mutableIntStateOf(0)
                                         }
                                         Row(
                                             modifier = Modifier
+                                                .padding(10.dp)
                                                 .fillMaxWidth()
                                         ) {
-                                            Image(Icons.Default.KeyboardArrowUp, "")
+                                            Image(Icons.Default.KeyboardArrowUp, "", modifier = Modifier.clickable { quant++ })
                                             Text(text = "Quantity: $quant")
-                                            Image(Icons.Default.KeyboardArrowUp, "")
+                                            Image(Icons.Default.KeyboardArrowDown, "", modifier = Modifier.clickable { if(quant>1){ quant--}})
                                         }
                                     }
                                 }

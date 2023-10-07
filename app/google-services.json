@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "950215716819",
+    "project_id": "hackmania-a64ff",
+    "storage_bucket": "hackmania-a64ff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950215716819:android:cac14d847ffaf587f60926",
+        "android_client_info": {
+          "package_name": "com.example.hackmania"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIFQLLTMp6Dzen_gvyjiYsDVc3xTpFHeQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
